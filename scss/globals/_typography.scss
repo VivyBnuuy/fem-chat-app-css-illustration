@@ -1,0 +1,26 @@
+@use "sass:math";
+
+// Font family
+$font-fam: 'Rubik', sans-serif;
+
+// Font sizes
+$header-large: math.div(40, 16) + rem;
+
+$body-medium: 1 + rem;
+
+$hero-xl: math.div(12, 16) + rem;
+$hero-large: math.div(11, 16) + rem;
+$hero-medium: math.div(9, 16) + rem;
+$hero-small: math.div(8, 16) + rem;
+
+// Line heights
+$body-line-height: math.div(28, 16) + rem;
+$hero-small-line-height: math.div(11, 16) + rem;
+
+// Letter spacing
+$hero-medium-letter-spacing: math.div(-0.07, 16) + rem;
+
+// Font weights
+$regular: 400;
+$medium: 500;
+$bold: 700;

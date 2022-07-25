@@ -1,12 +1,12 @@
 :root {
+  font-family: "Rubik", sans-serif;
   font-size: 1rem;
-  /* Custom properties */
-  --body-background: #333333;
+  font-weight: 400;
 }
 
 body {
   margin: 0;
-  background-color: var(--body-background);
+  background-color: #FAFAFA;
 }
 
 /* Forwards */ /* Forwards *//*# sourceMappingURL=style.css.map */

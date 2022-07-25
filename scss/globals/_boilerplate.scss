@@ -1,12 +1,14 @@
+@use "_typography" as fonts;
+@use "_colors" as colors;
+
 :root {
-    font-size: 1rem;
-
-    /* Custom properties */
-    --body-background: #333333;
-
+    // Font
+    font-family: fonts.$font-fam;
+    font-size: fonts.$body-medium;
+    font-weight: fonts.$regular;
 }
 
 body {
     margin: 0;
-    background-color: var(--body-background);
+    background-color: colors.$off-white;
 }

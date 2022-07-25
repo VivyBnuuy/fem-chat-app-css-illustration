@@ -3,16 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Page summary">
+    <meta name="description" content="Frontend Mentor challenge - Chat App CSS Illustration">
 
-    <link rel="icon" href="" />
+    <link rel="icon" href="images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
 
-    <title>Title</title>
+    <title>Chat App CSS Illustration</title>
   </head>
   <body>
     <main>
-      
+      <!-- Background shapes -->
+      <div class="background-shape --background-shape-purple"></div>
+      <div class="background-shape --background-shape-gray"></div>
+
+      <div class="grid">
+        <!-- Phone on left -->
+        <div class="grid__hero">
+          <!-- Contact at the top -->
+          <div class="grid__hero-contact">
+            <div class="grid__hero-contact-white"></div>
+            <span class="grid__hero-contact-previous"><</span>
+            <img src="images/avatar.jpg" class="grid__hero-avatar" alt="Samuel Green's avatar.">
+            <p class="grid__hero-contact-name">Samuel Green</p>
+            <p class="grid__hero-contact-status">Available to Walk</p>
+            <span class="grid__hero-contact-options">...</span>
+          </div>
+
+          <!-- Chat -->
+          <div class="grid__hero-chat">
+            <!-- Incoming messages -->
+            <div class="grid__hero-chat grid__hero-chat--incoming">
+              That sounds great. I'd be happy with that.
+            </div>
+            <div class="grid__hero-chat grid__hero-chat--incoming">
+              Could you send over some pictures of your dog, please?
+            </div>
+
+            <!-- Outgoing messages -->
+            <!-- Images -->
+            <div class="grid__hero-chat grid__hero-chat--images">
+              <img src="images/dog-image-1.jpg" class="grid__hero-image" alt="First picture of the dog, looking up with its tongue out.">
+              <img src="images/dog-image-2.jpg" class="grid__hero-image" alt="Second picture of the dog, sitting on the ground with its tongue out.">
+              <img src="images/dog-image-3.jpg" class="grid__hero-image" alt="Third picture of the dog, with a very large branch in its mouth.">
+            </div>
+
+            <!-- Messages -->
+            <div class="grid__hero-chat grid__hero-chat--outgoing">
+              Here are a few pictures. She's a happy girl!
+            </div>
+            <div class="grid__hero-chat grid__hero-chat--outgoing">
+              Can you make it?
+            </div>
+
+            <!-- Incoming messages -->
+            <div class="grid__hero-chat grid__hero-chat--incoming">
+              She looks so happy! The time we discussed works. How long shall I take her out for?
+            </div>
+
+            <!-- Walk options -->
+            <!-- Option 1 -->
+            <div class="grid__hero-walk">
+              <span class="grid__hero-walk-circle"></span>
+              <p class="grid__hero-walk-time">30 minute walk</p>
+              <p class="grid__hero-walk-price">$29</p>
+            </div>
+
+            <!-- Option 2 -->
+            <div class="grid__hero-walk">
+              <span class="grid__hero-walk-circle"></span>
+              <p class="grid__hero-walk-time">1 hour walk</p>
+              <p class="grid__hero-walk-price">$49</p>
+            </div>
+
+            <!-- Input -->
+            <div class="grid__hero-input">
+              <p class="grid__hero-input-text">Type a message...</p>
+              <span class="grid__hero-input-send">></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right text -->
+        <div class="grid__card">
+          <h1 class="grid__card-header">Simple booking</h1>
+          <p class="grid__card-paragraph">
+            Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.
+          </p>
+        </div>
+
+      </div>
     </main>
     <!-- <script src="js/main.js"></script> -->
   </body>

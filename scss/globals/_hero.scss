@@ -1,0 +1,146 @@
+@use "_colors" as colors;
+@use "_variables" as var;
+@use "_typography" as fonts;
+
+// Grid hero container 
+.grid__hero {
+    display: grid;
+    grid-template: repeat(3, auto) / 1fr;
+
+    background-color: colors.$white;
+
+    border-radius: 2rem;
+
+    padding: 0.5rem;
+
+    width: var.$hero-width;
+    max-width: var.$hero-width;
+
+    height: var.$hero-height;
+    max-height: var.$hero-height;
+
+    box-shadow: 0px 30px 60px -10px rgba(62, 39, 83, 0.25);
+
+    // Grid hero contents
+    &-contents {
+        background-color: colors.$purple-white;
+
+        border-radius: 2rem;
+
+        padding: 0.1rem;
+    }
+
+    // Contact Information
+    &-contact {
+        display: grid;
+        grid-template: repeat(3, auto) / repeat(3, max-content) auto;
+
+        background-image: colors.$purple-gradient;
+
+        border-radius: 2rem 2rem 0.5rem 0.5rem;
+
+        padding: 1rem;
+
+        &-white {
+            background-color: colors.$white;
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+        &-previous {
+            grid-area: 2 / 1 / 4 / 2;
+            align-self: center;
+
+            color: colors.$white;
+
+            &--top {
+                width: var.$chevon-width;
+                height: var.$chevron-height;
+
+                display: block;
+
+                background-color: colors.$white;
+
+                transform: rotate(25deg);
+
+                position: relative;
+                top: 0.9px;
+
+                border-radius: 1rem;
+            }
+
+            &--bottom {
+                width: var.$chevon-width;
+                height: var.$chevron-height;
+
+                display: block;
+
+                background-color: colors.$white;
+
+                transform: rotate(155deg);
+
+                position: relative;
+                top: -0.9px;
+
+                border-radius: 1rem;
+            }
+        }
+
+        &-avatar {
+            grid-area: 2 / 2 / 4 / 3;
+            align-self: center;
+            
+            width: var.$avatar-size;
+
+            margin: 0 0.5rem;
+
+            border-radius: 100%;
+            border-style: solid;
+            border-width: 0.1rem;
+            border-color: colors.$white;
+        }
+
+        &-name {
+            grid-area: 2 / 3 / 3 / 4;
+            align-self: start;
+
+            margin: 0;
+
+            font-size: fonts.$hero-large;
+            color: colors.$white;
+        }
+
+        &-status {
+            grid-area: 3 / 3 / 4 / 4;
+            align-self: start;
+
+            margin: 0;
+
+            font-size: fonts.$hero-small;
+            color: colors.$brighter-purple;
+        }
+
+        &-options {
+            grid-area: 2 / 4 / 4 / 5;
+            align-self: center;
+            justify-self: end;
+
+            &-circle { 
+                display: block;
+
+                width: 0.2rem;
+
+                height: 0.2rem;
+
+                margin-bottom: 0.05rem;
+    
+                border-radius: 100%;
+    
+                background-color: colors.$white;
+            }
+        }
+    }
+}
+
+.grid__hero-contents {
+    
+}

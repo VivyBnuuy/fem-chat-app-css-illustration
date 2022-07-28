@@ -15,73 +15,82 @@
   </head>
   <body>
     <main>
-      <!-- Background shapes -->
-      <div class="background-shape --background-shape-purple"></div>
-      <div class="background-shape --background-shape-gray"></div>
+      <div class="background">
+        <div class="background__shape background__shape--purple"></div>
+        <div class="background__shape background__shape--gray"></div>
+      </div>
 
       <div class="grid">
         <!-- Phone on left -->
         <div class="grid__hero">
-          <!-- Contact at the top -->
-          <div class="grid__hero-contact">
-            <div class="grid__hero-contact-white"></div>
-            <span class="grid__hero-contact-previous"><</span>
-            <img src="images/avatar.jpg" class="grid__hero-avatar" alt="Samuel Green's avatar.">
-            <p class="grid__hero-contact-name">Samuel Green</p>
-            <p class="grid__hero-contact-status">Available to Walk</p>
-            <span class="grid__hero-contact-options">...</span>
-          </div>
-
-          <!-- Chat -->
-          <div class="grid__hero-chat">
-            <!-- Incoming messages -->
-            <div class="grid__hero-chat grid__hero-chat--incoming">
-              That sounds great. I'd be happy with that.
-            </div>
-            <div class="grid__hero-chat grid__hero-chat--incoming">
-              Could you send over some pictures of your dog, please?
+          <div class="grid__hero-contents">
+            <!-- Contact at the top -->
+            <div class="grid__hero-contact">
+              <div class="grid__hero-contact-white"></div>
+              <span class="grid__hero-contact-previous">
+                <span class="grid__hero-contact-previous grid__hero-contact-previous--top"></span><span class="grid__hero-contact-previous grid__hero-contact-previous--bottom"></span>
+              </span>
+              <img src="images/avatar.jpg" class="grid__hero-contact-avatar" alt="Samuel Green's avatar.">
+              <p class="grid__hero-contact-name">Samuel Green</p>
+              <p class="grid__hero-contact-status">Available to Walk</p>
+              <span class="grid__hero-contact-options">
+                <span class="grid__hero-contact-options-circle"></span>
+                <span class="grid__hero-contact-options-circle"></span>
+                <span class="grid__hero-contact-options-circle"></span>
+              </span>
             </div>
 
-            <!-- Outgoing messages -->
-            <!-- Images -->
-            <div class="grid__hero-chat grid__hero-chat--images">
-              <img src="images/dog-image-1.jpg" class="grid__hero-image" alt="First picture of the dog, looking up with its tongue out.">
-              <img src="images/dog-image-2.jpg" class="grid__hero-image" alt="Second picture of the dog, sitting on the ground with its tongue out.">
-              <img src="images/dog-image-3.jpg" class="grid__hero-image" alt="Third picture of the dog, with a very large branch in its mouth.">
-            </div>
+            <!-- Chat -->
+            <div class="grid__hero-chat">
+              <!-- Incoming messages -->
+              <div class="grid__hero-chat grid__hero-chat--incoming">
+                That sounds great. I'd be happy with that.
+              </div>
+              <div class="grid__hero-chat grid__hero-chat--incoming">
+                Could you send over some pictures of your dog, please?
+              </div>
 
-            <!-- Messages -->
-            <div class="grid__hero-chat grid__hero-chat--outgoing">
-              Here are a few pictures. She's a happy girl!
-            </div>
-            <div class="grid__hero-chat grid__hero-chat--outgoing">
-              Can you make it?
-            </div>
+              <!-- Outgoing messages -->
+              <!-- Images -->
+              <div class="grid__hero-chat grid__hero-chat--images">
+                <img src="images/dog-image-1.jpg" class="grid__hero-image" alt="First picture of the dog, looking up with its tongue out.">
+                <img src="images/dog-image-2.jpg" class="grid__hero-image" alt="Second picture of the dog, sitting on the ground with its tongue out.">
+                <img src="images/dog-image-3.jpg" class="grid__hero-image" alt="Third picture of the dog, with a very large branch in its mouth.">
+              </div>
 
-            <!-- Incoming messages -->
-            <div class="grid__hero-chat grid__hero-chat--incoming">
-              She looks so happy! The time we discussed works. How long shall I take her out for?
-            </div>
+              <!-- Messages -->
+              <div class="grid__hero-chat grid__hero-chat--outgoing">
+                Here are a few pictures. She's a happy girl!
+              </div>
+              <div class="grid__hero-chat grid__hero-chat--outgoing">
+                Can you make it?
+              </div>
 
-            <!-- Walk options -->
-            <!-- Option 1 -->
-            <div class="grid__hero-walk">
-              <span class="grid__hero-walk-circle"></span>
-              <p class="grid__hero-walk-time">30 minute walk</p>
-              <p class="grid__hero-walk-price">$29</p>
-            </div>
+              <!-- Incoming messages -->
+              <div class="grid__hero-chat grid__hero-chat--incoming">
+                She looks so happy! The time we discussed works. How long shall I take her out for?
+              </div>
 
-            <!-- Option 2 -->
-            <div class="grid__hero-walk">
-              <span class="grid__hero-walk-circle"></span>
-              <p class="grid__hero-walk-time">1 hour walk</p>
-              <p class="grid__hero-walk-price">$49</p>
-            </div>
+              <!-- Walk options -->
+              <!-- Option 1 -->
+              <div class="grid__hero-walk">
+                <span class="grid__hero-walk-circle"></span>
+                <p class="grid__hero-walk-time">30 minute walk</p>
+                <p class="grid__hero-walk-price">$29</p>
+              </div>
 
-            <!-- Input -->
-            <div class="grid__hero-input">
-              <p class="grid__hero-input-text">Type a message...</p>
-              <span class="grid__hero-input-send">></span>
+              <!-- Option 2 -->
+              <div class="grid__hero-walk">
+                <span class="grid__hero-walk-circle"></span>
+                <p class="grid__hero-walk-time">1 hour walk</p>
+                <p class="grid__hero-walk-price">$49</p>
+              </div>
+
+              <!-- Input -->
+              <div class="grid__hero-input">
+                <p class="grid__hero-input-text">Type a message...</p>
+                <span class="grid__hero-input-send">></span>
+              </div>
             </div>
           </div>
         </div>

@@ -1,0 +1,10 @@
+.grid {
+    display: grid;
+    grid-template: repeat(2, auto) / 1fr;
+    justify-items: center;
+
+    position: absolute;
+    top: 0px;
+
+    margin: 3rem 2rem;
+}

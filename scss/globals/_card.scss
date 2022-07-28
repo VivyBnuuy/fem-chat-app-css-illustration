@@ -1,0 +1,18 @@
+@use "_typography" as fonts;
+@use "_colors" as colors;
+
+.grid__card {
+    text-align: center;
+
+    margin-top: 2rem;
+
+    &-header {
+        font-size: fonts.$header-large;
+        color: colors.$dark-purple;
+    }
+
+    &-paragraph {
+        line-height: fonts.$paragraph-line-height;
+        color: colors.$gray
+    }
+}

@@ -1,0 +1,32 @@
+@use "sass:math";
+
+// Background size
+$background-max: math.div(510, 16) + rem;
+
+// Background position
+:root {
+    // Left part of background math
+    --background-a: calc(-510px + 100vw);
+    --background-b: calc(100vw / 2);
+    --background-c: calc(var(--background-a) - var(--background-b));
+
+    // Right part of background math
+    --background-a2: calc(510px - 100vw);
+    --background-b2: calc(100vw / 2);
+    --background-c2: calc(var(--background-a2) + var(--background-b2));
+
+    // Final variables to use
+    --background-left: var(--background-c);
+    --background-right: var(--background-c2);
+}
+
+// Hero size
+$hero-width: math.div(247, 16) + rem;
+$hero-height: math.div(505, 16) + rem;
+
+// Contact Avatar
+$avatar-size: math.div(24, 16) + rem;
+
+// Chevron
+$chevron-height: math.div(6, 16) + rem;
+$chevon-width: math.div(2.5, 16) + rem;

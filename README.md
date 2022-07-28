@@ -1,5 +1,5 @@
 # Chat App CSS Illustration
-![image](https://user-images.githubusercontent.com/47509295/181571370-ff9e60f4-47cd-4337-bcaa-5a0126bbd54b.png)
+![image](https://user-images.githubusercontent.com/47509295/181582028-94c58f1e-0907-42a2-821f-ecd4007e8abb.png)
 
 Hi! Welcome to the repository for my solution to this <a href="https://www.frontendmentor.io/challenges/chat-app-css-illustration-O5auMkFqY" target="_blank">Frontend Mentor challenge</a>!
 

@@ -3,6 +3,10 @@
 // Background size
 $background-max: math.div(510, 16) + rem;
 
+// Background radius
+
+$background-radius: math.div(255, 16) + rem;
+
 // Background position
 :root {
     // Left part of background math

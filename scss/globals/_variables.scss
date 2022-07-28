@@ -27,6 +27,24 @@ $hero-height: math.div(505, 16) + rem;
 // Contact Avatar
 $avatar-size: math.div(24, 16) + rem;
 
-// Chevron
-$chevron-height: math.div(6, 16) + rem;
-$chevon-width: math.div(2.5, 16) + rem;
+// Contact Chevron size
+$chevron-avatar-height: math.div(6, 16) + rem;
+$chevon-avatar-width: math.div(2.5, 16) + rem;
+
+// Contact chevron top positions
+$chevron-top-top: math.div(0.9, 16) + rem;
+$chevron-bottom-top: math.div(-0.9, 16) + rem;
+
+// Images size
+$img-width: math.div(40, 16) + rem;
+
+// Send button chevron size
+$chevron-send-height: math.div(8, 16) + rem;
+$chevon-send-width: math.div(3, 16) + rem;
+
+// Send button chevron top positions
+$chevron-send-top-top: math.div(4, 16) + rem;
+$chevron-send-bottom-top: math.div(-4, 16) + rem;
+
+// Border width for avatar and walk button
+$border-width: math.div(1, 16) + rem;

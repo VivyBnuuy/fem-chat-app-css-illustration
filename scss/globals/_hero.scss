@@ -16,14 +16,25 @@
     width: var.$hero-width;
     max-width: var.$hero-width;
 
-    height: var.$hero-height;
-    max-height: var.$hero-height;
-
     box-shadow: 0px 30px 60px -10px rgba(62, 39, 83, 0.25);
+
+    &-white {
+        background-color: colors.$white;
+        grid-area: 1 / 1 / 3 / 2;
+        justify-self: center;
+
+        height: 1.25rem;
+        width: 50%;
+
+        border-radius: 0 0 1rem 1rem;
+
+        z-index: 999;
+    }
 
     // Grid hero contents
     &-contents {
         background-color: colors.$purple-white;
+        grid-area: 1 / 1 / 4 / 2;
 
         border-radius: 2rem;
 
@@ -39,12 +50,7 @@
 
         border-radius: 2rem 2rem 0.5rem 0.5rem;
 
-        padding: 1rem;
-
-        &-white {
-            background-color: colors.$white;
-            grid-area: 1 / 1 / 2 / 2;
-        }
+        padding: 2rem 1rem 0.75rem 1rem;
 
         &-previous {
             grid-area: 2 / 1 / 4 / 2;
@@ -53,8 +59,8 @@
             color: colors.$white;
 
             &--top {
-                width: var.$chevon-width;
-                height: var.$chevron-height;
+                width: var.$chevon-avatar-width;
+                height: var.$chevron-avatar-height;
 
                 display: block;
 
@@ -63,14 +69,14 @@
                 transform: rotate(25deg);
 
                 position: relative;
-                top: 0.9px;
+                top: var.$chevron-top-top;
 
                 border-radius: 1rem;
             }
 
             &--bottom {
-                width: var.$chevon-width;
-                height: var.$chevron-height;
+                width: var.$chevon-avatar-width;
+                height: var.$chevron-avatar-height;
 
                 display: block;
 
@@ -79,7 +85,7 @@
                 transform: rotate(155deg);
 
                 position: relative;
-                top: -0.9px;
+                top: var.$chevron-bottom-top;
 
                 border-radius: 1rem;
             }
@@ -95,7 +101,7 @@
 
             border-radius: 100%;
             border-style: solid;
-            border-width: 0.1rem;
+            border-width: var.$border-width;
             border-color: colors.$white;
         }
 
@@ -139,8 +145,180 @@
             }
         }
     }
-}
 
-.grid__hero-contents {
-    
+    &-chat {
+        display: grid;
+
+        padding: 0.5rem;
+        margin: 0.5rem 0 0.25rem 0;
+
+        &--incoming {
+            justify-self: start;
+
+            background-color: colors.$off-purple;
+
+            border-radius: 0.5rem 0.5rem 0.5rem 0.25rem;
+
+            color: colors.$bright-purple;
+            font-size: fonts.$hero-small;
+
+            max-width: 22ch;
+
+            padding: 0.5rem;
+            margin: 0 0 0.5rem 0;
+        }
+
+        &--outgoing {
+            justify-self: end;
+
+            background-color: colors.$white;
+
+            border-radius: 0.5rem 0.5rem 0.25rem 0.5rem;
+
+            box-shadow: 0px 10px 5px -5px rgba(62, 39, 83, 0.045318);
+
+            color: colors.$gray-purple;
+            font-size: fonts.$hero-small;
+
+            max-width: 22ch;
+
+            padding: 0.5rem;
+            margin: 0 0 0.5rem 0;
+        }
+
+        &--images {
+            display: flex;
+            justify-self: end;
+            justify-items: flex-end;
+
+            margin: 0.5rem 0;
+            padding: 0;
+        }
+
+        &-image {
+            border-radius: 0.5rem;
+
+            max-width: var.$img-width;
+
+            margin: 0 0 0 0.5rem;
+        }
+    }
+
+    &-walk {
+        display: grid;
+        grid-template: 1fr / max-content 1fr max-content;
+
+        background-image: colors.$walk-gradient;
+
+        border-radius: 0.5rem 0.5rem 0.5rem 0.25rem;
+
+        padding: 0.5rem;
+        margin: 0 0 0.5rem 0;
+
+        max-width: 13ch;
+
+        &-circle {
+            align-self: center;
+
+            width: 0.5rem;
+            height: 0.5rem;
+
+            border-radius: 100%;
+            border-style: solid;
+            border-width: var.$border-width;
+            border-color: colors.$pink;
+        }
+        &-time {
+            align-self: center;
+
+            font-size: fonts.$hero-small;
+            color: colors.$white;
+
+            margin: 0 0.5rem;
+            padding-top: 0.1rem;
+        }
+
+        &-price {
+            align-self: center;
+
+            font-size: fonts.$hero-xl;
+            font-weight: fonts.$bold;
+            color: colors.$white;
+
+            margin: 0 0.5rem 0 1rem;
+        }
+    }
+
+    &-input {
+        display: grid;
+        grid-template: auto / repeat(2, 1fr);
+
+        background-color: colors.$white;
+
+        border-radius: 2rem;
+
+        font-size: fonts.$hero-medium;
+        color: colors.$off-blue;
+
+        margin: 0.5rem 0 0 0;
+
+        padding: 0.25rem;
+
+        &-text {
+            align-self: center;
+            
+            margin: 0 0 0 0.5rem;
+        }
+
+        &-send {
+            display: grid;
+            justify-content: center;
+
+            align-self: center;
+            justify-self: end;
+
+            background-color: colors.$dark-purple;
+
+            width: var.$avatar-size;
+            height: var.$avatar-size;
+
+            border-radius: 100%;
+
+            &--top {
+                width: var.$chevon-send-width;
+                height: var.$chevron-send-height;
+
+                display: block;
+
+                background-color: colors.$white;
+
+                transform: rotate(315deg);
+                
+                position: relative;
+                top: var.$chevron-send-top-top;
+
+                border-radius: 1rem;
+            }
+
+            &--bottom {
+                width: var.$chevon-send-width;
+                height: var.$chevron-send-height;
+
+                display: block;
+
+                background-color: colors.$white;
+
+                transform: rotate(225deg);
+
+                position: relative;
+                top: var.$chevron-send-bottom-top;
+
+                border-radius: 1rem;
+            }
+        }
+    }
+
+    @media screen and (min-width: 700px) {
+        grid-area: 1 / 1 / 2 / 2;
+    }
 }

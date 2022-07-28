@@ -15,4 +15,14 @@
         line-height: fonts.$paragraph-line-height;
         color: colors.$gray
     }
+
+    @media screen and (min-width: 700px) {
+        grid-area: 1 / 2 / 2 / 3;
+
+        text-align: left;
+
+        max-width: 45ch;
+
+        margin-left: 3rem;
+    }
 }

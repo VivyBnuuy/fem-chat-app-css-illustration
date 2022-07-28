@@ -9,6 +9,13 @@ body {
   background-color: #FAFAFA;
 }
 
+@media screen and (min-width: 700px) {
+  main {
+    display: grid;
+    justify-items: center;
+  }
+}
+
 :root {
   --background-a: calc(-510px + 100vw);
   --background-b: calc(100vw / 2);
@@ -22,7 +29,6 @@ body {
 
 .background {
   display: grid;
-  min-height: 100%;
   overflow: hidden;
 }
 .background__shape {
@@ -33,17 +39,32 @@ body {
 }
 .background__shape--purple {
   grid-area: 1/1/2/2;
-  border-radius: 0 0 255px 255px;
+  border-radius: 0 0 100% 100%;
   position: relative;
   left: var(--background-left);
+}
+@media screen and (min-width: 700px) {
+  .background__shape--purple {
+    left: -10rem;
+  }
 }
 .background__shape--gray {
   grid-area: 2/1/3/2;
   justify-self: end;
-  border-radius: 255px 255px 0 0;
+  border-radius: 100% 100% 0 0;
   opacity: 0.03;
   position: relative;
   left: min(var(--background-c2), 50vw);
+}
+@media screen and (min-width: 700px) {
+  .background__shape--gray {
+    left: 10rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  .background {
+    width: 100%;
+  }
 }
 
 .grid {
@@ -54,6 +75,16 @@ body {
   top: 0px;
   margin: 3rem 2rem;
 }
+@media screen and (min-width: 700px) {
+  .grid {
+    grid-template: auto/auto auto -webkit-max-content;
+    grid-template: auto/auto auto max-content;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3rem;
+    height: 100%;
+  }
+}
 
 .grid__hero {
   display: grid;
@@ -63,12 +94,20 @@ body {
   padding: 0.5rem;
   width: 15.4375rem;
   max-width: 15.4375rem;
-  height: 31.5625rem;
-  max-height: 31.5625rem;
   box-shadow: 0px 30px 60px -10px rgba(62, 39, 83, 0.25);
+}
+.grid__hero-white {
+  background-color: #FFFFFF;
+  grid-area: 1/1/3/2;
+  justify-self: center;
+  height: 1.25rem;
+  width: 50%;
+  border-radius: 0 0 1rem 1rem;
+  z-index: 999;
 }
 .grid__hero-contents {
   background-color: #f5f3f7;
+  grid-area: 1/1/4/2;
   border-radius: 2rem;
   padding: 0.1rem;
 }
@@ -78,11 +117,7 @@ body {
   grid-template: repeat(3, auto)/repeat(3, max-content) auto;
   background-image: linear-gradient(225deg, #E844FF 0%, #8739FF 100%);
   border-radius: 2rem 2rem 0.5rem 0.5rem;
-  padding: 1rem;
-}
-.grid__hero-contact-white {
-  background-color: #FFFFFF;
-  grid-area: 1/1/2/2;
+  padding: 2rem 1rem 0.75rem 1rem;
 }
 .grid__hero-contact-previous {
   grid-area: 2/1/4/2;
@@ -96,7 +131,7 @@ body {
   background-color: #FFFFFF;
   transform: rotate(25deg);
   position: relative;
-  top: 0.9px;
+  top: 0.05625rem;
   border-radius: 1rem;
 }
 .grid__hero-contact-previous--bottom {
@@ -106,7 +141,7 @@ body {
   background-color: #FFFFFF;
   transform: rotate(155deg);
   position: relative;
-  top: -0.9px;
+  top: -0.05625rem;
   border-radius: 1rem;
 }
 .grid__hero-contact-avatar {
@@ -116,7 +151,7 @@ body {
   margin: 0 0.5rem;
   border-radius: 100%;
   border-style: solid;
-  border-width: 0.1rem;
+  border-width: 0.0625rem;
   border-color: #FFFFFF;
 }
 .grid__hero-contact-name {
@@ -146,6 +181,126 @@ body {
   border-radius: 100%;
   background-color: #FFFFFF;
 }
+.grid__hero-chat {
+  display: grid;
+  padding: 0.5rem;
+  margin: 0.5rem 0 0.25rem 0;
+}
+.grid__hero-chat--incoming {
+  justify-self: start;
+  background-color: #EEE5F4;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.25rem;
+  color: #9341C8;
+  font-size: 0.5rem;
+  max-width: 22ch;
+  padding: 0.5rem;
+  margin: 0 0 0.5rem 0;
+}
+.grid__hero-chat--outgoing {
+  justify-self: end;
+  background-color: #FFFFFF;
+  border-radius: 0.5rem 0.5rem 0.25rem 0.5rem;
+  box-shadow: 0px 10px 5px -5px rgba(62, 39, 83, 0.045318);
+  color: #6E5D7E;
+  font-size: 0.5rem;
+  max-width: 22ch;
+  padding: 0.5rem;
+  margin: 0 0 0.5rem 0;
+}
+.grid__hero-chat--images {
+  display: flex;
+  justify-self: end;
+  justify-items: flex-end;
+  margin: 0.5rem 0;
+  padding: 0;
+}
+.grid__hero-chat-image {
+  border-radius: 0.5rem;
+  max-width: 2.5rem;
+  margin: 0 0 0 0.5rem;
+}
+.grid__hero-walk {
+  display: grid;
+  grid-template: 1fr/max-content 1fr -webkit-max-content;
+  grid-template: 1fr/max-content 1fr max-content;
+  background-image: linear-gradient(165deg, #E844FF 0%, #8739FF 100%);
+  border-radius: 0.5rem 0.5rem 0.5rem 0.25rem;
+  padding: 0.5rem;
+  margin: 0 0 0.5rem 0;
+  max-width: 13ch;
+}
+.grid__hero-walk-circle {
+  align-self: center;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 0.0625rem;
+  border-color: #E472FF;
+}
+.grid__hero-walk-time {
+  align-self: center;
+  font-size: 0.5rem;
+  color: #FFFFFF;
+  margin: 0 0.5rem;
+  padding-top: 0.1rem;
+}
+.grid__hero-walk-price {
+  align-self: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0 0.5rem 0 1rem;
+}
+.grid__hero-input {
+  display: grid;
+  grid-template: auto/repeat(2, 1fr);
+  background-color: #FFFFFF;
+  border-radius: 2rem;
+  font-size: 0.5625rem;
+  color: #C5C9CC;
+  margin: 0.5rem 0 0 0;
+  padding: 0.25rem;
+}
+.grid__hero-input-text {
+  align-self: center;
+  margin: 0 0 0 0.5rem;
+}
+.grid__hero-input-send {
+  display: grid;
+  justify-content: center;
+  align-self: center;
+  justify-self: end;
+  background-color: #3E2753;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+}
+.grid__hero-input-send--top {
+  width: 0.1875rem;
+  height: 0.5rem;
+  display: block;
+  background-color: #FFFFFF;
+  transform: rotate(315deg);
+  position: relative;
+  top: 0.25rem;
+  border-radius: 1rem;
+}
+.grid__hero-input-send--bottom {
+  width: 0.1875rem;
+  height: 0.5rem;
+  display: block;
+  background-color: #FFFFFF;
+  transform: rotate(225deg);
+  position: relative;
+  top: -0.25rem;
+  border-radius: 1rem;
+}
+@media screen and (min-width: 700px) {
+  .grid__hero {
+    grid-area: 1/1/2/2;
+  }
+}
 
 .grid__card {
   text-align: center;
@@ -158,6 +313,14 @@ body {
 .grid__card-paragraph {
   line-height: 1.75rem;
   color: #A39DA9;
+}
+@media screen and (min-width: 700px) {
+  .grid__card {
+    grid-area: 1/2/2/3;
+    text-align: left;
+    max-width: 45ch;
+    margin-left: 3rem;
+  }
 }
 
 /* Forwards */ /* Forwards *//*# sourceMappingURL=style.css.map */

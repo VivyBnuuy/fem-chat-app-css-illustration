@@ -8,6 +8,7 @@
 
     &-header {
         font-size: fonts.$header-large;
+        font-weight: fonts.$medium;
         color: colors.$dark-purple;
     }
 
@@ -23,6 +24,6 @@
 
         max-width: 45ch;
 
-        margin-left: 3rem;
+        margin-left: 7rem;
     }
 }

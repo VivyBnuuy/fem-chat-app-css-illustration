@@ -1,10 +1,10 @@
 .grid {
     display: grid;
-    grid-template: repeat(2, auto) / 1fr;
+    grid-template: repeat(2, max-content) / 1fr;
+    grid-area: 1 / 1 / 2 / 2;
     justify-items: center;
 
-    position: absolute;
-    top: 0px;
+    height: unset;
 
     margin: 3rem 2rem;
 
@@ -12,7 +12,6 @@
         grid-template: auto / auto auto max-content;
         align-items: center;
         justify-content: center;
-
 
         margin: 0 3rem;
 

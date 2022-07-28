@@ -12,7 +12,7 @@ For this challenge, I used the following:
 - BEM
 
 # Looking Back
-- This challenge's design uses very small font sizes - I personally would have gone for quite a bit bigger, but the goal is to get the deisng as close as possible to the original design so I used the same sizes.
+- This challenge's design uses very small font sizes - I personally would have gone for quite a bit bigger, but the goal is to get the design as close as possible to the original design so I used the same sizes.
 - I struggled a little on the background shapes initially, but once I figured out the math to position them depending on screen size on smaller widths, I was good to go with the rest of the project!
 - I'm pretty sure I'm misunderstanding how BEM works - My class names got pretty long and I feel like I should've had multiple blocks within the grid block instead of the way I did it.
 

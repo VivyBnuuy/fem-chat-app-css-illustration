@@ -17,6 +17,6 @@ For this challenge, I used the following:
 - I'm pretty sure I'm misunderstanding how BEM works - My class names got pretty long and I feel like I should've had multiple blocks within the grid block instead of the way I did it.
 
 # The End
-Thanks for checking out my solution to this challenge! If you have any feedback, I would love if you reached out to me or left a comment on my <a href="https://www.frontendmentor.io/solutions/chat-app-css-illustration-sassscss-bem-css-grid-VEWQxD4YNV" target="_blank">solution page</a> - I'm always looking to improve!
+Thanks for checking out my solution to this challenge! If you have any feedback, I would love if you reached out to me or opened an issue if there's anything that needs fixing; I'm always looking to improve!
 
 Happy coding!
